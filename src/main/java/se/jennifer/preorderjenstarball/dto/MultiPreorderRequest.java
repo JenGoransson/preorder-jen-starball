@@ -60,5 +60,6 @@ public class MultiPreorderRequest {
     public void setItems(List<PreorderItem> items) {
         this.items = items;
     }
+
 }
 
