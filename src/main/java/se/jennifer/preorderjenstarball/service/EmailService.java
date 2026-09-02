@@ -44,7 +44,7 @@ public class EmailService {
         message.setTo(to);
         message.setSubject("Bekräftelse på din beställning – SwM 2025 Starball");
         message.setText(body.toString());
-        mailSender.send(message);
+       // mailSender.send(message);
 
         // ⭐ Admin-mail
         StringBuilder adminBody = new StringBuilder();
@@ -66,7 +66,7 @@ public class EmailService {
         adminMessage.setTo("order.jennifer.goransson@gmail.com");
         adminMessage.setSubject("Ny order mottagen – SwM 2025 Starball");
         adminMessage.setText(adminBody.toString());
-        mailSender.send(adminMessage);
+       // mailSender.send(adminMessage);
     }
 }
 
