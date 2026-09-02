@@ -13,8 +13,10 @@ public class Preorder {
     private Long id;
 
     private String customerName;
-
     private String customerEmail;
+    private String street;
+    private String postalCode;
+    private String city;
 
     @Column(nullable = false, length = 10)
     private String type; // KL, KX, KR
@@ -52,6 +54,30 @@ public class Preorder {
 
     public void setCustomerEmail(String customerEmail) {
         this.customerEmail = customerEmail;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getType() {

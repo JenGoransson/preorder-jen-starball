@@ -24,8 +24,11 @@ form.addEventListener("submit", async (e) => {
     const kl = parseInt(document.getElementById("kl").value || "0", 10);
     const kx = parseInt(document.getElementById("kx").value || "0", 10);
     const kr = parseInt(document.getElementById("kr").value || "0", 10);
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
+    const name = document.getElementById("customerName").value.trim();
+    const email = document.getElementById("customerEmail").value.trim();
+    const street = document.getElementById("street").value.trim();
+    const postalCode = document.getElementById("postalCode").value.trim();
+    const city = document.getElementById("city").value.trim();
 
     const items = [];
     if (kl > 0) items.push({ type: "KL", quantity: kl });
@@ -50,6 +53,9 @@ form.addEventListener("submit", async (e) => {
     const payload = {
         customerName: name,
         customerEmail: email,
+        street: street,
+        postalCode: postalCode,
+        city: city,
         items: items
     };
 

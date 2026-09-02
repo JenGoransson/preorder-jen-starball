@@ -56,6 +56,10 @@ public class PreorderService {
             Preorder preorder = new Preorder();
             preorder.setCustomerName(req.getCustomerName());
             preorder.setCustomerEmail(req.getCustomerEmail());
+            preorder.setStreet(req.getStreet());
+            preorder.setPostalCode(req.getPostalCode());
+            preorder.setCity(req.getCity());
+
             preorder.setType(item.getType());
             preorder.setQuantity(item.getQuantity());
 
@@ -66,6 +70,9 @@ public class PreorderService {
         emailService.sendConfirmation(
                 req.getCustomerEmail(),
                 req.getCustomerName(),
+                req.getStreet(),
+                req.getPostalCode(),
+                req.getCity(),
                 req.getItems()
         );
 
