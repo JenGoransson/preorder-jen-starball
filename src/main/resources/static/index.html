@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Förhandsbeställning – SwM 2025 Starball</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+    <div class="card">
+        
+        <img src="boll.jpg" alt="Starball SwM 2025" class="product-image">
+        
+        <div class="header">
+            <h1 class="header-title">Förhandsbeställning – SwM 2025 Jennifer Göransson Starball</h1>
+            <p class="header-sub">Välj antal av varje bolltyp och fyll i dina uppgifter.
+            Observera att en bokning är bindande. </p>
+        </div>
+        
+        <form id="preorderForm">
+            
+            <div class="grid">
+                <div class="field-group">
+                    <label><span class="pill-label">KL</span></label>
+                    <input type="number" id="kl" min="0" value="0">
+                </div>
+                
+                <div class="field-group">
+                    <label><span class="pill-label">KX</span></label>
+                    <input type="number" id="kx" min="0" value="0">
+                </div>
+                
+                <div class="field-group">
+                    <label><span class="pill-label">KR</span></label>
+                    <input type="number" id="kr" min="0" value="0">
+                </div>
+            </div>
+            
+            <div class="field-group">
+                <label>Namn</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="field-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="btn-row">
+                <button type="button" class="btn-secondary" id="resetBtn">Återställ</button>
+                <button type="submit" class="btn-primary" id="submitBtn">Skicka beställning</button>
+            </div>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

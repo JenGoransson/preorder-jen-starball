@@ -1,0 +1,144 @@
+:root {
+    --primary: #0052cc;
+    --primary-light: #e6f0ff;
+    --danger: #d93025;
+    --danger-light: #ffe5e5;
+    --success: #1a7f37;
+    --success-light: #e6ffe6;
+    --border-radius: 8px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+.page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    padding: 24px 28px;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.header {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 16px;
+}
+
+.header-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.header-sub {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.field-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.pill-label {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px rgba(0, 82, 204, 0.25);
+}
+
+.btn-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+button {
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.alert {
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+.alert-error {
+    background: var(--danger-light);
+    border-left: 4px solid var(--danger);
+    color: #7f1d1d;
+}
+
+.alert-success {
+    background: var(--success-light);
+    border-left: 4px solid var(--success);
+    color: #14532d;
+}
+
+@media (max-width: 720px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
