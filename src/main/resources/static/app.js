@@ -62,7 +62,7 @@ form.addEventListener("submit", async (e) => {
     try {
         setLoading(true);
 
-        const response = await fetch("/preorders/multi", {
+        const response = await fetch("https://preorder-jen-starball.onrender.com/preorders/multi", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
