@@ -80,17 +80,36 @@ form.addEventListener("submit", async (e) => {
         }
 
         const json = await response.json();
-        const totalQty = items.reduce((sum, i) => sum + i.quantity, 0);
+
+        const orderedItemsText = items
+            .map(i => `${i.quantity} st ${i.type}`)
+            .join(", ");
 
         resultDiv.innerHTML = `
     <div class="alert alert-success">
-        <div class="alert-title">Order mottagen!✅ Tack för din beställning!</div>
-        <div>
-            Din order är registrerad och en bekräftelse skickas till 
-            <strong>${email}</strong>.
-        </div>
+        <div class="alert-title">Order mottagen! ✅</div>
+
+        <p>
+            Tack <strong>${name}</strong> för din beställning av 
+            <strong>${orderedItemsText}</strong>.
+        </p>
+
+        <p>
+            Din order är nu registrerad. När bollen är färdigproducerad
+            återkommer vi med betalningsinformation samt leveransalternativ.
+        </p>
+
+        <p>
+            Om något blivit fel i din beställning, släng iväg ett mail till:
+            <strong>order.jennifer.goransson@gmail.com</strong>
+        </p>
+
+        <p>
+            En kopia av din beställning har registrerats hos oss.
+        </p>
     </div>
 `;
+
     } finally {
         setLoading(false);
     }

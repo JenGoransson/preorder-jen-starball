@@ -18,16 +18,16 @@ public class PreorderService {
 
     private final BallStockRepository ballStockRepository;
     private final PreorderRepository preorderRepository;
-    private final EmailService emailService;   // ⭐ Lägg till detta
+    // ⭐ Lägg till detta
 
     public PreorderService(
             BallStockRepository ballStockRepository,
-            PreorderRepository preorderRepository,
-            EmailService emailService   // ⭐ Ta emot det här
+            PreorderRepository preorderRepository
+
     ) {
         this.ballStockRepository = ballStockRepository;
         this.preorderRepository = preorderRepository;
-        this.emailService = emailService;      // ⭐ Spara det här
+
     }
 
     @Transactional
@@ -65,16 +65,6 @@ public class PreorderService {
 
             created.add(preorderRepository.save(preorder));
         }
-
-        // ⭐ SKICKA MAIL EFTER ATT ALLT ÄR SPARAT
-        emailService.sendConfirmation(
-                req.getCustomerEmail(),
-                req.getCustomerName(),
-                req.getStreet(),
-                req.getPostalCode(),
-                req.getCity(),
-                req.getItems()
-        );
 
         return created;
     }
