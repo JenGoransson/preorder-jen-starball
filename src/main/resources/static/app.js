@@ -94,10 +94,6 @@ form.addEventListener("submit", async (e) => {
             <strong>${orderedItemsText}</strong>.
         </p>
 
-        <p>
-            Din order är nu registrerad. När bollen är färdigproducerad
-            återkommer vi med betalningsinformation samt leveransalternativ.
-        </p>
 
         <p>
             Om något blivit fel i din beställning, släng iväg ett mail till:
@@ -105,7 +101,7 @@ form.addEventListener("submit", async (e) => {
         </p>
 
         <p>
-            En kopia av din beställning har registrerats hos oss.
+            Ett bekräftelsemail kommer skickas till den angivna epost-adressen inom 24h.
         </p>
     </div>
 `;
