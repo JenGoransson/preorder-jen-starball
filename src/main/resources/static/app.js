@@ -17,6 +17,7 @@ resetBtn.addEventListener("click", () => {
     resultDiv.innerHTML = "";
 });
 
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
     resultDiv.innerHTML = "";
